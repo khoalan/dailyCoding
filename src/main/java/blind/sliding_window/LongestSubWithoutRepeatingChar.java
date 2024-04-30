@@ -69,6 +69,30 @@ public class LongestSubWithoutRepeatingChar {
         return maxS;
     }
          * */
+
+                /*
+         * Solution 3, no extra space:
+         *
+         * initiate start pointers at 0
+         * for loop in len of input str
+         * initiate max comparison at the first index
+         *
+         * second for loop j from start pointer to current index i
+         * if char at s[j] = s[i], increase j
+         *
+         * maintain max value after the second for
+        def lengthOfLongestSubstring(self, s: str) -> int:
+            start = 0
+            myMax = 0
+            for i in range(len(s)):
+                if start == i:
+                    myMax = max(myMax, i-start+1)
+                for j in range(start,i):
+                    if s[i]==s[j]:
+                        start = j+1
+                myMax = max(myMax, i-start+1)
+            return myMax  *
+            * */
     }
 
     public static void main(String[] args) {
