@@ -78,9 +78,10 @@ public class LongestSubWithoutRepeatingChar {
          * initiate max comparison at the first index
          *
          * second for loop j from start pointer to current index i
-         * if char at s[j] = s[i], increase j
+         * if char at s[j] = s[i], update start pointer = j+1
          *
-         * maintain max value after the second for
+         * maintain max value after the second for loop,
+         *  i - start + 1 = the length of the substring
         def lengthOfLongestSubstring(self, s: str) -> int:
             start = 0
             myMax = 0
